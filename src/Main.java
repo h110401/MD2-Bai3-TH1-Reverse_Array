@@ -21,10 +21,15 @@ public class Main {
 
         System.out.println("Reversed array:");
 
+        int[] tempArray = new int[size];
         for (int i = size - 1; i >= 0; i--) {
-            System.out.printf("%d\t", intArray[i]);
+            tempArray[size - 1 - i] = intArray[i];
         }
+        intArray = tempArray;
 
+        for (int i = 0; i < size; i++) {
+            System.out.print(intArray[i] + "\t");
+        }
     }
 }
 
